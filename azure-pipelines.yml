@@ -83,7 +83,7 @@ stages:
               buildType: 'current'
                           
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: hoppercodeproject'
+            displayName: 'Azure Web App Deploy: hopperwebapp'
             inputs:
               azureSubscription: $(subscription)
               appType: webAppLinux
