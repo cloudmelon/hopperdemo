@@ -63,8 +63,6 @@ stages:
       inputs:
         targetPath: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
 
-   
-
 - stage: Deploy
   displayName: Deploy stage
   dependsOn: Build
@@ -83,10 +81,6 @@ stages:
             displayName: 'Download Pipeline Artifact'
             inputs:
               buildType: 'current'
-
-         
-
-                  
                           
           - task: AzureWebApp@1
             displayName: 'Azure Web App Deploy: hoppercodeproject'
