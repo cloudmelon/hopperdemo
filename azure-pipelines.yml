@@ -77,17 +77,18 @@ stages:
       runOnce:
         deploy:
           steps:
-          - task: DownloadPipelineArtifact@1
-            displayName: 'Download Pipeline Artifact'
+          - task: YodLabs.UnzipTask.UnzipFile.Unzip File@0
+            displayName: 'Unzip Pipeline Artifact'
             inputs:
-              buildType: 'current'
+              inputs:
+              zipFilePath: '$(System.DefaultWorkingDirectory)/_ms-nodeops-CI/drop/$(Build.BuildId).zip'
+              destinationFolder: '$(System.DefaultWorkingDirectory)/_ms-nodeops-CI/drop'
                           
           - task: AzureWebApp@1
             displayName: 'Azure Web App Deploy: hopperwebapp'
             inputs:
               azureSubscription: $(subscription)
               appType: webAppLinux
-              appName: $(webappname)
-              runtimeStack: 'NODE|10.10'
-              package: $(System.ArtifactsDirectory)/drop/$(Build.BuildId).zip
-              startUpCommand: 'npm run start'
+              WebAppName: $(webappname)
+              packageForLinux: '$(System.DefaultWorkingDirectory)/_ms-nodeops-CI/drop'
+              WebConfigParameters: '-Handler iisnode -NodeStartFile index.js -appType node'
