@@ -91,4 +91,4 @@ stages:
               runtimeStack: 'NODE|10.10'
               package: $(System.ArtifactsDirectory)/drop/$(Build.BuildId).zip
               WebConfigParameters: '-Handler iisnode -NodeStartFile index.js -appType node'
-              startUpCommand: 'npm run start'
+              startUpCommand: 'node index.js'
