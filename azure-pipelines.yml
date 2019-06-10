@@ -48,11 +48,13 @@ stages:
         npm run build --if-present
         # npm run test --if-present
       displayName: 'npm install, build and test'
-
-    - task: PublishPipelineArtifact@0
-      displayName: 'Publish pipeline artifacts'
+    
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact: drop'
       inputs:
-        targetPath: $(Build.ArtifactStagingDirectory)
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        artifactName: 'drop' 
+
 
 - stage: Deploy
   displayName: Deploy stage
