@@ -74,5 +74,5 @@ stages:
               azureSubscription: $(subscription)
               appType: webAppLinux
               WebAppName: $(webappname)
-              packageForLinux: '$(System.DefaultWorkingDirectory)/_ms-nodeops-CI/drop'
+              packageForLinux: '$(Build.ArtifactStagingDirectory)/_ms-nodeops-CI/drop'
               WebConfigParameters: '-Handler iisnode -NodeStartFile index.js -appType node'
