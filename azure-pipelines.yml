@@ -8,12 +8,6 @@ trigger:
 
 variables:
 
-  # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'da8566cb-05ce-4638-b32c-baa025d7ae38'
-  
-  # Web app name
-  webAppName: 'hoppercodeproject'
-
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
@@ -27,6 +21,23 @@ stages:
       vmImage: $(vmImageName)
       
     steps:
+    - task: AzureCLI@1
+      displayName: 'Azure CLI '
+      inputs:
+        azureSubscription: $(subscription)
+        scriptLocation: inlineScript
+        inlineScript: 'az group create --location northeurope --name $(demorg)'
+
+
+    - task: AzureResourceGroupDeployment@2
+      displayName: 'Azure Deployment:Create Or Update Resource Group action on $(demorg)'
+      inputs:
+        azureSubscription: $(subscription)
+        resourceGroupName: '$(demorg)'
+        location: 'North Europe'
+        csmFile: iac/webapp.json
+        csmParametersFile: iac/webapp.parameters.json
+
     - task: NodeTool@0
       inputs:
         versionSpec: '10.x'
@@ -80,9 +91,9 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Azure Web App Deploy: hoppercodeproject'
             inputs:
-              azureSubscription: $(azureSubscription)
+              azureSubscription: $(subscription)
               appType: webAppLinux
-              appName: $(webAppName)
+              appName: $(webappname)
               runtimeStack: 'NODE|10.10'
               package: $(System.ArtifactsDirectory)/drop/$(Build.BuildId).zip
               startUpCommand: 'npm run start'

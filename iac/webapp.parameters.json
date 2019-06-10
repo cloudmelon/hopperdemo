@@ -3,16 +3,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "webAppName": {
-        "value": "hoppercodeproject"
+        "value": "hopperwebapp"
       },
       "hostingPlanName": {
-        "value": "hoppercodeprojectplan"
+        "value": "hopperappplan"
       },
       "appInsightsLocation": {
         "value": "northeurope"
       },
       "sku": {
-        "value": "Standard S1"
+        "value": "S1"
       }
     }
   }
