@@ -16,7 +16,7 @@ Create an Azure account by browsing to https://azure.microsoft.com/en-us/free/. 
 Go to dev.azure.com and create an account. 
 Create a new project
 
-<img src="screenshot/sstudentguidescreenshots/createproject.PNG" alt="yaml definition" width="600px"/>
+<img src="screenshot/studentguidescreenshots/createproject.PNG" alt="yaml definition" width="600px"/>
 
  
 
@@ -24,7 +24,7 @@ Name the project hopperproject
  
 Now go to Project Settings using the button the bottom left. Scroll down the page and toggle the button to switch on the view of Repos
  
- <img src="screenshot/sstudentguidescreenshots/turnonrepo.PNG" alt="yaml definition" width="600px"/>
+ <img src="screenshot/studentguidescreenshots/turnonrepo.PNG" alt="yaml definition" width="600px"/>
 
 Press Overview (top left) to refresh the view and click Repos.
 Now you need to add some the code into the Azure DevOps repo. 
@@ -32,7 +32,7 @@ Import a repository:
  
 Enter the repository details as shown here, using the repo https://github.com/jolguk/hopperanitademo.git and click Import
 
-<img src="screenshot/sstudentguidescreenshots/importrepository.PNG" alt="yaml definition" width="600px"/>
+<img src="screenshot/studentguidescreenshots/importrepository.PNG" alt="yaml definition" width="600px"/>
  
 Wait a little while
  
@@ -41,7 +41,7 @@ Then you’ll see your code has imported into the Azure DevOps repository
  
 Add a Service Connection. Go to Project Settings/Pipelines/Service Connections. Add a Service Connection, giving it the same name as your Subscription. 
 
-<img src="screenshot/sstudentguidescreenshots/createserviceconnection.PNG" alt="yaml definition" width="600px"/>
+<img src="screenshot/studentguidescreenshots/createserviceconnection.PNG" alt="yaml definition" width="600px"/>
  
 
 The codebase includes a yaml file which creates a Web App, also known as an App Service, in Azure. If you had wanted to do this manually, however, using a visual editor, we have created instructions to do this in the Appendix of this document. 
@@ -53,7 +53,7 @@ Select Azure Repos Git
  
 Select your repository (hopperproject) and the tool will find the azure-pipelines.yaml file in there. 
 
-<img src="screenshot/sstudentguidescreenshots/yamlfile.PNG" alt="yaml definition" width="600px"/>
+<img src="screenshot/studentguidescreenshots/yamlfile.PNG" alt="yaml definition" width="600px"/>
  
 
 Add variable group. Within Pipelines go to Library, then click + Variable Group. Toggle on Allow access to all pipelines. Add 3 variables to the variable group (key/value pairs) as follows:
