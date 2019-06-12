@@ -56,10 +56,10 @@ Select your repository (hopperproject) and the tool will find the azure-pipeline
 <img src="screenshot/studentguidescreenshots/yamlfile.PNG" alt="yaml definition" width="600px"/>
  
 
-Add variable group. Within Pipelines go to Library, then click + Variable Group. Toggle on Allow access to all pipelines. Add 3 variables to the variable group (key/value pairs) as follows:
-Name = demorg  Value  = msprep-hopper1xdemo
-Name = subscription Value = melonsub
-Name - webappname Value = mshopperwebapp
+Add a variable group. Within Pipelines go to Library, then click + Variable Group. Toggle on Allow access to all pipelines. Add 3 variables to the variable group (key/value pairs) as follows:
+Name = demorg  Value  = hopperwebapp
+Name = subscription Value = Subscription name, as set in your service connection
+Name - webappname Value = hoppercodeproject
 
 
 Now press Run and then Queue to run the pipeline. If you get an error message, ignore it and try again (this is some bug). 
@@ -73,6 +73,8 @@ Creating a Web App using the Visual Editor in Azure DevOps with an ARM template
 Now create a pipeline to create a Web App, also known as an App Service, in Azure. 
 
 Click on Pipelines on the Left, then New at the top, and then New Build Pipeline. 
+
+img src="screenshot/studentguidescreenshots/createclassicpipeline.PNG" alt="yaml definition" width="600px"/>
  
 
 Select Use The Classic Editor to use the wizard-driven process for this pipeline. 
@@ -84,9 +86,13 @@ It’s a good idea to rename this pipeline to something more meaningful, so hove
  
 Click the + sign next to Agent job 1
 Type ‘res’ in the search box on the top right and select Azure Resource Group Deployment. Press Add.
+
+img src="screenshot/studentguidescreenshots/azureresourcegroup.PNG" alt="yaml definition" width="600px"/>
  
 
 Click on the task, which now says ‘Some Settings Need Attention’ in red. Fill out the form to complete your subscription name, ‘hoppercodeproject’ for the webapp name, and UK South for the location. For Template click on the double dots to the right and select the path to the template webapp.json (yours will be a flatter path), and press OK.
+
+img src="screenshot/studentguidescreenshots/templatepath.PNG" alt="yaml definition" width="600px"/>
  
 
 In the Override Parameters box, type
