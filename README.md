@@ -9,7 +9,7 @@ Azure DevOps
 
 This consists of the following components:
 
-<img src="screenshot/studentguidescreenshots/pic.PNG" alt="yaml definition" width="600px"/>
+<img src="screenshot/pic.PNG" alt="Azure DevOps" width="600px"/>
 
 Git repositories for source control of your code
 Build and release management to support continuous integration and delivery of your apps
