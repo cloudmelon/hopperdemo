@@ -30,7 +30,7 @@ Press Overview (top left) to refresh the view and click Repos.
 Now you need to add some the code into the Azure DevOps repo. 
 Import a repository:
  
-Enter the repository details as shown here, using the repo https://github.com/jolguk/hopperanitademo.git and click Import
+Enter the repository details as shown here, using the repo https://github.com/cloudmelon/hopperdemo.git and click Import
 
 <img src="screenshot/studentguidescreenshots/importrepository.PNG" alt="yaml definition" width="600px"/>
  
