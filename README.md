@@ -69,10 +69,8 @@ Select your repository (hopperproject) and the tool will find the azure-pipeline
  
  ## Link up your variable group with CI/CD pipeline
 Add a variable group. Within Pipelines go to Library, then click + Variable Group. Toggle on Allow access to all pipelines. Add 3 variables to the variable group (key/value pairs) as follows:
-Name = demorg  Value  = hopperwebapp
-Name = subscription Value = Subscription name, as set in your service connection
-Name - webappname Value = hoppercodeproject
 
+<img src="screenshot/rg.PNG" alt="yaml definition" width="600px"/>
 
 Now press Run and then Queue to run the pipeline. If you get an error message, ignore it and try again (this is some bug). 
 
