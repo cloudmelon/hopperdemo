@@ -1,4 +1,4 @@
-## Hopper1x London 2019 : Azure Pipelines for Open Source Projects
+# Hopper1x London 2019 : Azure Pipelines for Open Source Projects
 
 Using unified CI/CD yaml definition pipeline:
 
@@ -9,7 +9,8 @@ Node.js application like below :
 
 <img src="screenshot/applications.PNG" alt="yaml definition" width="600px"/>
 
-# Pipeline Build Instructions
+
+## Getting started
 
 
 Create an Azure account by browsing to https://azure.microsoft.com/en-us/free/.  Go to portal.azure.com and then Click on Cost Management and Billing on the left-hand panel. You should see your subscription name in the middle panel – it will be a long string of letters and numbers with hyphens between. Note this name somewhere. 
@@ -20,7 +21,7 @@ Create a new project
 <img src="screenshot/studentguidescreenshots/createproject.PNG" alt="yaml definition" width="600px"/>
 
  
-
+## Setup Azure DevOps organisations
 Name the project hopperproject
  
 Now go to Project Settings using the button the bottom left. Scroll down the page and toggle the button to switch on the view of Repos
@@ -29,6 +30,7 @@ Now go to Project Settings using the button the bottom left. Scroll down the pag
 
 Press Overview (top left) to refresh the view and click Repos.
 Now you need to add some the code into the Azure DevOps repo. 
+
 Import a repository:
  
 Enter the repository details as shown here, using the repo https://github.com/cloudmelon/hopperdemo.git and click Import
@@ -39,7 +41,7 @@ Wait a little while
  
 Then you’ll see your code has imported into the Azure DevOps repository
  
- 
+ ## Setup service connection
 Add a Service Connection. Go to Project Settings/Pipelines/Service Connections. Add a Service Connection, giving it the same name as your Subscription. 
 
 <img src="screenshot/studentguidescreenshots/createserviceconnection.PNG" alt="yaml definition" width="600px"/>
@@ -47,7 +49,7 @@ Add a Service Connection. Go to Project Settings/Pipelines/Service Connections. 
 
 The codebase includes a yaml file which creates a Web App, also known as an App Service, in Azure. If you had wanted to do this manually, however, using a visual editor, we have created instructions to do this in the Appendix of this document. 
 
-
+ ## End-to-end automation : Setup CI/CD pipeline with yaml definition file 
 Now create a pipeline. This one is to build the code to deploy, and then to deploy it to the App Service.  Click Pipelines on the left, and then New Pipeline
  
 Select Azure Repos Git
@@ -56,7 +58,7 @@ Select your repository (hopperproject) and the tool will find the azure-pipeline
 
 <img src="screenshot/studentguidescreenshots/yamlfile.PNG" alt="yaml definition" width="600px"/>
  
-
+ ## Link up your variable group with CI/CD pipeline
 Add a variable group. Within Pipelines go to Library, then click + Variable Group. Toggle on Allow access to all pipelines. Add 3 variables to the variable group (key/value pairs) as follows:
 Name = demorg  Value  = hopperwebapp
 Name = subscription Value = Subscription name, as set in your service connection
@@ -67,7 +69,7 @@ Now press Run and then Queue to run the pipeline. If you get an error message, i
 
 
 
-# Appendix
+# The art of possible :  Using Grapic designer to set up CI/CD pipeline
 
 Creating a Web App using the Visual Editor in Azure DevOps with an ARM template
 
