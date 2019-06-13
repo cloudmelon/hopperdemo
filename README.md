@@ -1,4 +1,4 @@
-# Using unified CI/CD yaml definition pipeline with Azure DevOps to deploy node.js application pipeline
+## Hopper1x London 2019 : Azure Pipelines for Open Source Projects
 
 Using unified CI/CD yaml definition pipeline:
 
@@ -10,6 +10,7 @@ Node.js application like below :
 <img src="screenshot/applications.PNG" alt="yaml definition" width="600px"/>
 
 # Pipeline Build Instructions
+
 
 Create an Azure account by browsing to https://azure.microsoft.com/en-us/free/.  Go to portal.azure.com and then Click on Cost Management and Billing on the left-hand panel. You should see your subscription name in the middle panel – it will be a long string of letters and numbers with hyphens between. Note this name somewhere. 
 
