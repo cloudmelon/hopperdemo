@@ -74,7 +74,12 @@ Add a variable group. Within Pipelines go to Library, then click + Variable Grou
 
 Now press Run and then Queue to run the pipeline. If you get an error message, ignore it and try again (this is some bug). 
 
+Here are results possibly to show if you're using unified CI/CD yaml definition pipeline and create your CI/CD pipeline successfully:
 
+<img src="screenshot/definition.PNG" alt="yaml definition" width="600px"/>
+
+
+What we did so far, it is also possible to do it in another way byusing graphic designer. 
 
 # The art of possible :  Using Grapic designer to set up CI/CD pipeline
 
@@ -107,12 +112,10 @@ In the Override Parameters box, type
 -webAppName hoppercodeproject -hostingPlanName hoppercodeproject-plan -appInsightsLocation "South Central US" -sku "F1 Free"
 Select Save and Queue, then Save and Queue again (leaving other boxes default)
  
-Click on the hyperlink to watch the build. 
+Click on the hyperlink to watch the build again. 
 
 
-Using unified CI/CD yaml definition pipeline:
 
-<img src="screenshot/definition.PNG" alt="yaml definition" width="600px"/>
 
 ## Congratuations
 
