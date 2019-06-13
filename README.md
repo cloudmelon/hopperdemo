@@ -22,16 +22,15 @@ Create a new project
 
  
 ## Setup Azure DevOps organisations
-Name the project hopperproject
+- Name the project hopperproject
  
 Now go to Project Settings using the button the bottom left. Scroll down the page and toggle the button to switch on the view of Repos
  
  <img src="screenshot/studentguidescreenshots/turnonrepo.PNG" alt="yaml definition" width="600px"/>
 
-Press Overview (top left) to refresh the view and click Repos.
-Now you need to add some the code into the Azure DevOps repo. 
+Press Overview (top left) to refresh the view and click Repos. Now you need to add some the code into the Azure DevOps repo. 
 
-Import a repository:
+- Import a repository 
  
 Enter the repository details as shown here, using the repo https://github.com/cloudmelon/hopperdemo.git and click Import
 
@@ -52,7 +51,7 @@ The codebase includes a yaml file which creates a Web App, also known as an App 
  ## End-to-end automation : Setup CI/CD pipeline with yaml definition file 
 Now create a pipeline. This one is to build the code to deploy, and then to deploy it to the App Service.  Click Pipelines on the left, and then New Pipeline
  
-Select Azure Repos Git
+- Select Azure Repos Git
  
 Select your repository (hopperproject) and the tool will find the azure-pipelines.yaml file in there. 
 
@@ -71,11 +70,9 @@ Now press Run and then Queue to run the pipeline. If you get an error message, i
 
 # The art of possible :  Using Grapic designer to set up CI/CD pipeline
 
-Creating a Web App using the Visual Editor in Azure DevOps with an ARM template
+Creating a Web App using the Visual Editor in Azure DevOps with an ARM template.
 
-Now create a pipeline to create a Web App, also known as an App Service, in Azure. 
-
-Click on Pipelines on the Left, then New at the top, and then New Build Pipeline. 
+Now create a pipeline to create a Web App, also known as an App Service, in Azure. Click on Pipelines on the Left, then New at the top, and then New Build Pipeline. 
 
 <img src="screenshot/studentguidescreenshots/createclassicpipeline.PNG" alt="yaml definition" width="600px"/>
  
