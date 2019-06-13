@@ -1,13 +1,23 @@
 # Hopper1x London 2019 : Azure Pipelines for Open Source Projects
 
-Using unified CI/CD yaml definition pipeline:
+In this hands-on workshop participants will create a continuous integration pipeline for Node.js code, using the Azure DevOps product.
 
-<img src="screenshot/definition.PNG" alt="yaml definition" width="600px"/>
+## What is Azure DevOps ? 
+Azure DevOps (previously Visual Studio Team Services / VSTS) is Microsoft's answer to DevOps, and is essentially a cloud service for collaborating on code development, from writing the first lines of code through to building it, testing it and deploying it to production.
 
+Azure DevOps
 
-Node.js application like below :
+This consists of the following components:
 
-<img src="screenshot/applications.PNG" alt="yaml definition" width="600px"/>
+<img src="screenshot/studentguidescreenshots/pic.PNG" alt="yaml definition" width="600px"/>
+
+Git repositories for source control of your code
+Build and release management to support continuous integration and delivery of your apps
+Agile tools to support planning and tracking your work, code defects, and issues using Kanban and Scrum methods
+A variety of tools to test your apps, including manual/exploratory testing, load testing, and continuous testing
+Highly customisable dashboards for sharing progress and trends
+Built-in wiki for sharing information with your team
+In addition, the Azure DevOps ecosystem provides support for adding extensions, integrating with other popular services, such as: Campfire, Slack, Trello, UserVoice, and more, and developing your own custom extensions
 
 
 ## Getting started
@@ -102,6 +112,14 @@ Select Save and Queue, then Save and Queue again (leaving other boxes default)
 Click on the hyperlink to watch the build. 
 
 
+Using unified CI/CD yaml definition pipeline:
+
+<img src="screenshot/definition.PNG" alt="yaml definition" width="600px"/>
+
+
+Node.js application like below :
+
+<img src="screenshot/applications.PNG" alt="yaml definition" width="600px"/>
 
 
 
