@@ -54,11 +54,10 @@ stages:
         SourceFolder: '$(system.defaultworkingdirectory)'
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
-    - task: PublishBuildArtifacts@1
-      displayName: 'Publish Artifact: drop'
+    - task: PublishPipelineArtifact@0
       inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-        artifactName: 'drop' 
+        #artifactName: 'drop' 
+        targetPath: '$(Build.ArtifactStagingDirectory)'
 
 
 - stage: Deploy
