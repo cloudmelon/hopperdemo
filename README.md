@@ -59,6 +59,11 @@ Add a Service Connection. Go to Project Settings/Pipelines/Service Connections. 
 The codebase includes a yaml file which creates a Web App, also known as an App Service, in Azure. If you had wanted to do this manually, however, using a visual editor, we have created instructions to do this in the Appendix of this document. 
 
  ## End-to-end automation : Setup CI/CD pipeline with yaml definition file 
+
+ Add a variable group. Within Pipelines go to Library, then click + Variable Group. Toggle on Allow access to all pipelines. Add 3 variables to the variable group (key/value pairs) as follows:
+
+<img src="screenshot/rg.PNG" alt="yaml definition" width="600px"/>
+
 Now create a pipeline. This one is to build the code to deploy, and then to deploy it to the App Service.  Click Pipelines on the left, and then New Pipeline
  
 - Select Azure Repos Git
@@ -68,9 +73,8 @@ Select your repository (hopperproject) and the tool will find the azure-pipeline
 <img src="screenshot/studentguidescreenshots/yamlfile.PNG" alt="yaml definition" width="600px"/>
  
  ## Link up your variable group with CI/CD pipeline
-Add a variable group. Within Pipelines go to Library, then click + Variable Group. Toggle on Allow access to all pipelines. Add 3 variables to the variable group (key/value pairs) as follows:
 
-<img src="screenshot/rg.PNG" alt="yaml definition" width="600px"/>
+ Edit the pipeline by going to Pipelines/Builds/ then edit at the top right of the screen. Click on the elipsis (3 dots) and select Variables, then click on Link Variable Group. 
 
 Now press Run and then Queue to run the pipeline. If you get an error message, ignore it and try again (this is some bug). 
 
