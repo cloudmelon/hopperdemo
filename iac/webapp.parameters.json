@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "webAppName": {
-        "value": "msanitabwebapp"
+        "value": "melontest1xapp"
       },
       "hostingPlanName": {
         "value": "hopperappplan"
